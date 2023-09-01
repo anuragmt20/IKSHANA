@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Volunteer & Partnership</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/applynow.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<!-- header content here -->
+	</header>
+
+	<main>
+		<section id="apply-now">
+			<div class="container">
+				<h2>Volunteer & Partnership</h2>
+				<p>Please fill out the form below to apply to be a volunteer or partner.</p>
+				<form class="gform pure-form pure-form-stacked" method="POST" data-email="anuragmt458@gmail.com" action="https://script.google.com/macros/s/AKfycbxxcvn_4v0OHOSaNLOA_YCiUSIHXZQnFVDS5PQ7eQVWxnZD13UfwymdbsIi5inimJW-/exec">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" required>
+
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required>
+
+					<label for="phone">Phone Number</label>
+					<input type="tel" id="phone" name="phone" required>
+
+					<label for="interest">Interest</label>
+					<select id="interest" name="interest" required>
+						<option value="">Please select an option</option>
+						<option value="volunteer">Volunteer</option>
+						<option value="partner">Partner</option>
+					</select>
+
+					<label for="message">Message</label>
+					<textarea id="message" name="message" required></textarea>
+
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</section>
+		<script>
+			$("#submit-form").submit((e)=>{
+				e.preventDefault()
+				$.ajax({
+					url:"",
+					data:$("#submit-form").serialize(),
+					method:"post",
+					success:function (response){
+						alert("Form submitted successfully")
+						window.location.reload()
+						//window.location.href="https://google.com"
+					},
+					error:function (err){
+						alert("Something Error")
+		
+					}
+				})
+			})
+		</script>
+	</main>
+
+	<footer>
+		<!-- footer content here -->
+	</footer>
+</body>
+</html>

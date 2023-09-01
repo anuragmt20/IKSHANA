@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Donate Us</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/donate.css">
+</head>
+<body>
+	<header>
+		<h1>IKSHANA</h1>
+        <nav>
+            <ul>
+              <li><a href="index.html #welcome">Home</a></li>
+              <li><a href="index.html #features">About Us</a></li>
+              <li><a href="index.html #contact-us">Contact Us</a></li>
+            </ul>
+          </a>
+          </nav>
+	</header>
+
+	<main>
+        <h2>Make a Donation</h2>
+		    
+				<label for="amount">Donation amount:</label>
+				<input type="number" id="amount" name="amount" min="10" max="1000" step="10" required>
+
+				<label for="frequency">Donation frequency:</label>
+				<select id="frequency" name="frequency" required>
+                    <option value="once">Once</option>
+					<option value="monthly">Monthly</option>
+					<option value="quarterly">Quarterly</option>
+					<option value="annually">Annually</option>
+				</select>
+
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="date" id="expiry-date" name="expiry-date" required>
+		        <a href="thankyou.html" class="button">
+				<button type="submit">Donate Now</button></a>
+			</form>
+	</main>
+
+	<footer>
+		<p>thankyou!</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Emergency Contact</title>
+        <link href="assets/css/emergency.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Open+Sans" rel="stylesheet"> <!-- This line is linking the Google Font Open Sans to website so we can use it --> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="icon" href="https://storage.googleapis.com/esfcoco-hotlinemap/hotlinemapicon.png">
+        
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>IKSHANA</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html #welcome">Home</a></li>
+                        <li><a href="index.html #features">About Us</a></li>
+                        <li><a href="index.html #contact-us">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    <section class="find-numbers">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="jumbotron">
+                        <div class="search">
+                            <h2>Get Emergency Contact</h2>
+                            <br>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select District
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                       
+                                    <li><a href="#Thiruvananthapuram" onclick="displaythi()">Thiruvananthapuram</a></li>
+                                    <li><a href="#Kollam" onclick="displaykol()">Kollam</a></li>
+                                    <li><a href="#Pathanamthitta" onclick="displaypat()">Pathanamthitta</a></li>
+                                    <li><a href="#Alappuzha" onclick="displayala()">Alappuzha</a></li>
+                                    <li><a href="#Kottayam" onclick="displaykot()">Kottayam</a></li>
+                                    <li><a href="#Idukki" onclick="displayidu()">Idukki</a></li>
+                                    <li><a href="#Ernakulam" onclick="displayern()">Ernakulam</a></li>
+                                    <li><a href="#Thrissur" onclick="displaythr()">Thrissur</a></li>
+                                    <li><a href="#Palakkad" onclick="displaypal()">Palakkad</a></li>
+                                    <li><a href="#Malappuram" onclick="displaymal()">Malappuram</a></li>
+                                    <li><a href="#Kozhikode" onclick="displaykoz()">Kozhikode</a></li>
+                                    <li><a href="#Wayanad" onclick="displayway()">Wayanad</a></li>
+                                    <li><a href="#Kannur" onclick="displaykan()">Kannur</a></li>
+                                    <li><a href="#Kasaragod" onclick="displaykas()">Kasaragod</a></li>
+                                </ul>
+                            </div>
+                            <br>
+                            <p id="selected"></p>
+                            <p id="demo"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="jumbotron">
+                    <h2></h2>
+                    <div class="content-info" id="information">Please Select Your District</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <p id="copyright">Copyright © 2023 IKSHANA</p>
+    </div>
+    <script src="assets/js/script.js"></script>
+    </body>
+</html>

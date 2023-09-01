@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>IKSHANA</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style1.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/style2.css">
+    </head>
+     <body>
+
+        <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo.png" alt="IKSHANA"/>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="#welcome" class="active">Home</a></li>
+                            <li><a href="#features">About Us</a></li>
+                            <li><a href="#work-process">Other services</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#pricing-plans">Donate Us</a></li>
+                            <li><a href="#blog">Blog Entries</a></li>
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+   
+    </header>
+    <!-- ***** Header Area End ***** -->
+   <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1 class="translatable" data-en="IKSHANA" data-ml="ഇക്ഷാന"><strong>IKSHANA</strong></h1>
+                        <p>LanguageSelector</p>
+                   
+                        
+
+   
+    <head>
+        
+       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          .welcome-area .container {
+            display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+          /* Sample CSS styles for the translatable elements */
+          .welcome-area .translatable {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #333;
+            /* Add more CSS styles as needed */
+          }
+
+         
+          /* Center the content on the page */
+    
+      
+          /* CSS for the language switch */
+          .welcome-area .languageSwitch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #ccc;
+            padding: 4px;
+            cursor: pointer;
+          }
+      
+          .welcome-area .switchButton {
+            width: 50%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: #8261ee; /* EN switch color */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          transition: background-color 0.3s ease-in-out;
+          }
+      
+          /* CSS for the language switch animation */
+          .welcome-area .switchButton.en {
+            background-color: #8261ee;
+          }
+      
+          .welcome-area .switchButton.ml {
+            background-color: #ff589e; /* MAL switch color */
+          }
+        </style>
+        
+      </head>
+      
+      <body>
+        
+      
+  
+        
+      
+        <!-- Language switch -->
+        <div class="languageSwitch" onclick="toggleLanguage()">
+          <div class="switchButton en">EN</div>
+          <div class="switchButton ml">MAL</div>
+        </div>
+        
+      
+        <script>
+          // Translation data object (same as before)
+          const translations = {
+            en: {
+              "Welcome to My Website!": "Welcome to My Website!",
+              "This is the main content section.": "This is the main content section.",
+              "Contact us for more information.": "Contact us for more information.",
+            },
+            ml: {
+              "Welcome to My Website!": "MAL: എന്റെ വെബ്‌സൈറ്റിലേക്ക് സ്വാഗതം!",
+              "This is the main content section.": "MAL: ഇത് പ്രധാന ഉള്ളടക്കം വിഭാഗമാണ്‌.",
+              "Contact us for more information.": "MAL: കൂടുതൽ വിവരങ്ങൾക്ക് ബന്ധപ്പെടുക.",
+            },
+          };
+      
+          // Function to replace the text content based on the selected language
+          function translateWebsite(selectedLanguage) {
+            const translatableElements = document.querySelectorAll('.translatable');
+            translatableElements.forEach(element => {
+              const originalText = element.getAttribute('data-' + selectedLanguage);
+              if (originalText) {
+                element.textContent = originalText;
+              }
+            });
+          }
+      
+          // Function to toggle the language switch
+          function toggleLanguage() {
+            const languageSwitch = document.querySelector('.languageSwitch');
+            const switchButtonEN = document.querySelector('.switchButton.en');
+            const switchButtonML = document.querySelector('.switchButton.ml');
+      
+            if (languageSwitch.classList.contains('en')) {
+              languageSwitch.classList.remove('en');
+              languageSwitch.classList.add('ml');
+              switchButtonEN.style.backgroundColor = '#ccc';
+              switchButtonML.style.backgroundColor = '#ff589e'; /* MAL switch color when clicked */
+              translateWebsite('ml');
+            } else {
+              languageSwitch.classList.remove('ml');
+              languageSwitch.classList.add('en');
+              switchButtonEN.style.backgroundColor = '#8261ee'; /* EN switch color when clicked */
+              switchButtonML.style.backgroundColor = '#ccc';
+              translateWebsite('en');
+            }
+          }
+      
+          // Initialize with the default language (English)
+          translateWebsite('en');
+        </script>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+
+
+
+
+
+
+
+    
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                </div>
+                                <a href="maps.html" class="features-title">
+                                 <p class="translatable" data-en="Live maps" data-ml="ലൈവ് മാപ്സ്">Live maps</p></a>
+                                    
+                                
+                            </div>
+                        </div>
+
+
+
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="" alt=""></i>
+                                </div>
+                                <a href="emergency/needs.html" class="features-title">
+                                    <p class="translatable" data-en="emergency things" data-ml="അത്യാവശ്യക സാമഗ്രികൾ">Emergency Needs</p></a>
+                                <p></p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="" alt=""></i>
+                                </div>
+                                <a href="breakingnews.html" class="features-title"><p class="translatable" data-en=" Latest News" data-ml="പുതിയ വാർത്തകൾ"> Latest News</p></a>
+                                <p></p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Small End ***** -->
+
+   
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-bottom-100" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">IKSHANA is a nonprofit organization founded in 2023 as a first responder to  disasters.</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Throughout history, natural disasters and humanitarian crises have brought out the humanity in all of us. Mankind bands together to support their fellow human beings in their time of need.<br>IKSHANA was founded  to provide hope via a new model for disaster response, one that meets modern crises head-on with an innovative, adaptable, and scalable approach. One that harnesses strategic partnerships and empowers local populations in the rebuilding effort.<br>Our work is made possible entirely by the generous donors and volunteers, who we thank from the bottom of our heart.</p>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/right-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Home Parallax Start ***** -->
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1> <p class="translatable" data-en="SERVICES" data-ml=" സേവനം">SERVICES</p></h1>
+                            <p><p class="translatable" data-en="we offer a wide varierty of services to the world" data-ml=" ഞങ്ങൾ ലോകത്ത് വിവിധ സേവനങ്ങൾ നല്കുന്നു.">we offer a wide varierty of services to the world</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ***** Mini Box Start ***** -->
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="Emergency.html" class="mini-box">
+                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                          <strong> <p class="translatable" data-en="Emergency Contact" data-ml=" അടിയന്തര കോൺടാക്റ്റ് നമ്പർ">Emergency Contact</p></strong> 
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="airq.html" class="mini-box">
+                            <i><img src="assets/images/work-process-item-02.png" alt=""></i>
+                          <strong><p class="translatable" data-en="Air Quality Index" data-ml="കേരള വായുവിന്റെ നിലവാരം">Air Quality Index</p></strong>  
+                            <span></span>
+                        </a>
+                    </div>
+                   
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="medical.html" class="mini-box">
+                            <i><img src="assets/images/work-process-item-04.png" alt=""></i>
+                        <strong>     <p class="translatable" data-en="Quick Assistant Bot" data-ml="ക്വിക്ക് അസിസ്റ്റന്റ് ബോട്ട്">Quick Assistant Bot</p></strong>  
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="weather.html" class="mini-box">
+                            <i><img src="assets/images/work-process-item-05.png" alt=""></i>
+                        <strong>     <p class="translatable" data-en="Weather Forecast" data-ml=" കേരള കാലാവസ്ഥാ പ്രവചനം">Weather Forecast</p> </strong>  
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="volnteer.html" class="mini-box">
+                            <i><img src="assets/images/work-process-item-06.png" alt=""></i>
+                        <strong>    <p class="translatable" data-en="Volunteer & partnerships" data-ml="ഇക്ഷാന സന്നദ്ധസേവ കൂട്ടായ്മ">Volunteer & partnerships</p> </strong>  
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- ***** Mini Box End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+    <!-- ***** Testimonials Start ***** -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">What do they say?</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p> Statements from individuals who have experience with disaster preparedness, response and recovery.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>"As a resident of an area prone to natural disasters, I have seen firsthand the importance of disaster management. Thanks to the diligent work of emergency responders and disaster management teams, my community has been able to weather storms, floods, and other disasters with minimal damage and loss of life."</p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Jane Smith</h3>
+                                <span>Local Resident</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Testimonials Item End ***** -->
+                
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>"As a business owner, I know that being prepared for emergencies is critical to the success and safety of my employees and customers. Thanks to the support and guidance of  disaster management team, we were able to develop a  emergency response plan that has helped us through severe weather events."</p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">John Doe</h3>
+                                <span>Business Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- ***** Testimonials Item End ***** -->
+                
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>"As a government official, I have seen how critical disaster management is to protecting the health and safety of our communities. By investing in disaster preparedness and response, we can help prevent loss of life and property damage, and ensure that our communities can bounce back quickly from disasters." </p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Sarah Thompson</h3>
+                                <span>Government offical</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials End ***** -->
+
+    <!-- ***** Pricing Plans Start ***** -->
+    <section class="section colored" id="pricing-plans">
+        <div class="container" >
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Donate Us</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Your generosity makes a transformative and lifelong impact. When you give, you’ll join our family of passionate changemakers committed to changing our world.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12"></div>
+                 <!-- ***** Pricing Item Start ***** -->
+ <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+    <div class="pricing-item">
+        <div class="pricing-header">
+            <h3 class="pricing-title"></h3>
+        </div>
+        <div class="pricing-body">
+            <div class="price-wrapper">
+                <span class="currency"></span>
+                <span class="price">DONATE</span>
+                <span class="period"></span>
+            </div>
+            <ul class="list">
+                <li class="active">Deliver emergency nutrition.</li>
+                <li class="active">Provide water and sanitation supplies</li>
+                <li class="active">Provide household & non food items.</li>
+                <li class="active">Sponsor a preparedness training</li>
+            </ul>
+            
+        </div>
+        <div class="pricing-footer">
+            <a href="donate.html" class="main-button">Donate Now</a>
+        </div>
+    </div>
+</div>
+
+               
+                <!-- ***** Pricing Item End ***** -->
+
+                
+              
+            </div>
+        </div>
+        </section>
+
+                
+       
+
+    <!-- ***** Blog Start ***** -->
+    <section class="section" id="blog">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Blog Entries</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-01.jpg" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#">Kerala: People vs the floods</a>
+                            </h3>
+                            <div class="text">
+                                Helicopters and naval and coastguard boats rescued people stranded atop homes and other elevations.
+                            </div>
+                            <a href="https://economictimes.indiatimes.com/blogs/cursor/kerala-people-vs-the-floods/" class="main-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-02.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#">Post-Disaster  Sanitation Relief</a>
+                            </h3>
+                            <div class="text">
+                                These camp sites offered homeless people an immediate though temporary solution.
+                            </div>
+                            <a href="https://cddindia.org/post-disaster-relief/" class="main-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-03.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="#">Rebuilding life in Kerala after the floods                                </a>
+                            </h3>
+                            <div class="text">
+                                The critical need for continued support to Kerala in the management of flood waste.
+                            </div>
+                            <a href="https://www.forbesindia.com/blog/infrastructure/rebuilding-life-in-kerala-after-the-floods/" class="main-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Blog End ***** -->
+
+    <!-- ***** Contact Us Start ***** -->
+    <section class="section colored" id="contact-us">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Let's have talk </h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Write us about yours thoughts and ideas that will help lives during a disaster</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!-- ***** Contact Text Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h5 class="margin-bottom-30">Keep in touch</h5>
+                    <div class="contact-text">
+                        <p>Want to learn more about how we're creating lasting change in life's all over our world?</p>
+                        <p>Thank you.</p>
+                    </div>
+                </div>
+                <!-- ***** Contact Text End ***** -->
+
+                <!-- ***** Contact Form Start ***** -->
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <div class="contact-form">
+                        <form action="mailto:anuragmt458@gmail.com" method="post" enctype="text/plain">
+                        <form id="contact" action="" method="get">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                              <fieldset>
+                                <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- ***** Contact Form End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us End ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/profile.php?id=100093577663723&mibextid=ZbWKw"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/MtAnurag?t=iZQBBpQBuj9ZemWpmAjWzQ&s=09"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://instagram.com/ikshanaorg?igshid=MzRlODBiNWFlZA=="><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Copyright &copy; 2023 IKSHANA  </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/Emergency.js"></script>
+
+  </body>
+</html>

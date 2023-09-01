@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.fa {
+  padding: 1px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.1;
+}
+
+.fa-facebook {
+
+  color: white;
+}
+
+.fa-twitter {
+
+  color: white;
+}
+
+
+.fa-instagram {
+  
+  color: white;
+}
+
+        /* Style the footer */
+        .footer {
+      background-color: #8261ee;
+      color: white;
+      padding: 20px;
+      width: 10000px;
+      text-align: left;
+    }
+
+    /* Style the links in the footer */
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Change color of links on hover */
+    .footer a:hover {
+      color: #f1f1f1;
+    }
+    
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: #ddd;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #8261ee;
+  height: 120px;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: violet;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+div1 {
+			position: absolute;
+			top: 150px;
+			
+		}
+    div2 {
+			position: absolute;
+			top: 250px;
+			right: 200px;
+		}
+    div3 {
+
+top: 10px;
+    left: 10px;
+    
+		}
+    div4 {
+
+position: absolute;
+
+width: 1600px;
+
+
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <h1>Air Quality</h1>
+   
+  <a href="#home">contact Us</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Other Services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Emergency Contact</a>
+      <a href="#">Weather Forecast</a>
+      <a href="#">Air Quality Index</a>
+      <a href="#">Volunteer And Partnership</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="dropbtn">Features
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Todays Update</a>
+      <a href="#">Live Map</a>
+      <a href="#">Emergency Need</a>
+    </div>
+  </div> 
+  <a href="#home">About Us</a>
+  <a href="#home">Home</a>
+</div>
+<div2>
+  <div name="airvisual_widget" key="6444108cd02aa0630e44d106"></div>
+   <script type="text/javascript" src="https://widget.iqair.com/script/widget_v3.0.js"> </script>
+</div2>
+
+<div1>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+     body {
+       font-family: Arial, sans-serif;
+     }
+     .container {
+       margin: 0 auto;
+       width: 600px;
+       padding: 20px;
+       border: 2px;
+     }
+     h1 {
+       text-align: center;
+       font-size: 32px;
+       bottom: 20px;
+     }
+     table {
+       border-collapse: collapse;
+       width: 100%;
+       bottom: 20px;
+     }
+     th, td {
+       text-align: left;
+       padding: 8px;
+       border-bottom: 2px solid #ddd;
+     }
+     th {
+       background-color: #f2f2f2;
+     }
+     .green {
+       color: black;
+     }
+     .yellow {
+       color: black;
+     }
+     .orange {
+       color: black;
+     }
+     .red {
+       color: black;
+     }
+     .purple {
+       color: black;
+     }
+     .maroon {
+       color: black;
+     }
+   </style>
+ </head>
+ <body>
+   <div class="container">
+     <h1></h1>
+     <table>
+       <thead>
+         <tr>
+           <th>PM2.5</th>
+           <th>Air Quality Index</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>0-12</td>
+           <td class="green">Good</td>
+         </tr>
+         <tr>
+           <td>12.1-35.4</td>
+           <td class="yellow">Moderate</td>
+         </tr>
+         <tr>
+           <td>35.5-55.4</td>
+           <td class="orange">Unhealthy for Sensitive Groups</td>
+         </tr>
+         <tr>
+           <td>55.5-150.4</td>
+           <td class="red">Unhealthy</td>
+         </tr>
+         <tr>
+           <td>150.5-250.4</td>
+           <td class="purple">Very Unhealthy</td>
+         </tr>
+         <tr>
+           <td>250.5+</td>
+           <td class="maroon">Hazardous</td>
+         </tr>
+       </tbody>
+     </table>
+    </body>
+   </div1>
+<br><br>
+<div4><div class='tableauPlaceholder' id='viz1682240286499' style='position: relative'><noscript><a href='https:&#47;&#47;www.iqair.com&#47;'><img alt='Interactive Map ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HD&#47;HDZWBFKS5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;HDZWBFKS5' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HD&#47;HDZWBFKS5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='increment_view_count' value='no' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1682240286499');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.2)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='10px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div4>
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class="footer">
+  <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>  
+  </p>
+</footer>
+
+
+
+</html>

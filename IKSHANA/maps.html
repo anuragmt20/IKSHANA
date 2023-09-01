@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .fa {
+  padding: 1px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.1;
+}
+
+.fa-facebook {
+
+  color: white;
+}
+
+.fa-twitter {
+
+  color: white;
+}
+
+
+.fa-instagram {
+  
+  color: white;
+}
+
+
+   .flex-container {
+      display: flex;
+      width: 100%;
+      background-color:white;
+      height: 250px;
+    }
+    .flex-container > div3 {
+      background-color:violet;
+      height: 250px;
+      width:400px;
+      margin: 0px;
+      
+      padding: 0px;
+      font-size: 30px;
+    }
+    .flex-container > div0 {
+      background-color:yellow;
+      height: 250px;
+      width:380px;
+      margin: 0px;
+      
+      padding: 0px;
+      font-size: 30px;
+    }
+    .flex-container > div1 {
+      background-color:orange;
+      height: 250px;
+      width:380px;
+      margin: 0px;
+      
+      padding: 0px;
+      font-size: 30px;
+    }
+    .flex-container > div2 {
+      background-color:red;
+      height: 250px;
+      width:400px;
+      margin: 0px;
+      
+      padding: 0px;
+      font-size: 30px;
+    }
+    .flex-container > div4 {
+      background-color:red;
+      height: 250px;
+      width:400px;
+      margin: 0px;
+      
+      padding: 0px;
+      font-size: 30px;
+    }
+    blink {
+  animation: 2s linear infinite condemned_blink_effect;
+}
+
+@keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+.right{
+  float:right;
+}
+
+.left{
+  float:left;
+}
+
+ 
+        /* Style the footer */
+        .footer {
+      background-color: #8261ee;
+
+      color: white;
+      padding: 20px;
+      text-align: left;
+    }
+
+    /* Style the links in the footer */
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Change color of links on hover */
+    .footer a:hover {
+      color: #f1f1f1;
+    }
+    
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  text-align: center;
+    color: #ddd;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #8261ee;
+
+  height: 120px;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: violet;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>&nbspLIVE MAP</h1>
+   
+  <a href="#home">contact Us</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Other Services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Emergency Contact</a>
+      <a href="#">Weather Forecast</a>
+      <a href="#">Air Quality Index</a>
+      <a href="#">Volunteer And Partnership</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="dropbtn">Features
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Todays Update</a>
+      <a href="#">Live Map</a>
+      <a href="#">Emergency Need</a>
+    </div>
+  </div> 
+  <a href="#home">About Us</a>
+  <a href="#home">Home</a>
+</div>
+</head>
+
+<body>
+
+
+
+<iframe align="left" src="https://www.rainviewer.com/map.html?loc=17.3926,80.9037,4&oFa=1&oC=1&oU=0&oCS=1&oF=0&oAP=0&c=3&o=90&lm=1&layer=radar-sat&sm=1&sn=1&hu=0" width="48%" frameborder="1" style="border: 20px black;height:50vh;" ></iframe>
+
+
+<iframe align="right"src="https://www.rainviewer.com/hurricane-map.html?loc=7.3625,78.7939,4&oFa=0&oC=0&oCS=0&oF=0&oAP=0&layer=sat&hu=1" width="48%" frameborder="1" style="border: 20px black;height:50vh;" ></iframe>
+
+<span class="right"><strong><blink>SATELLITE IMAGE</strong></blink></span><span class="left"><strong><blink>RADAR IMAGE</blink></strong></span></body>
+
+
+<div class="flex-container">
+
+  <div0>
+    <a href="flood.html"><img src="https://www.gurnee.il.us/images/default-source/gis-icons/floodplainicon2.png?sfvrsn=109673b1_2"alt width="400px" height="250px"></a>
+     <strong>FLOOD PRONE<br> AREA</strong></div0>
+  <div1><a href="lighting.html"><img src="https://cdn4.iconfinder.com/data/icons/weather-glyph-5/100/41-512.png"alt width="400px" height="250px"></a>
+    <strong> LIGTHING PRONE<br> AREA</strong></div1>
+  <div2><a href="landslide.html"><img src="https://cdn-icons-png.flaticon.com/512/103/103684.png"alt width="400px" height="250px"></a>
+    <strong>LAND SLIDE PRONE<br> AREA</strong></div2>  
+<div3><a href="earthquack.html"><img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX23837503.jpg"alt width="400px" height="250px"></a>
+<strong>EARTH QUACK PRONE<br> AREA</strong></div3> 
+ </div>
+<br><br><br><br><br><br>
+<footer class="footer">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thank You for Donating!</title>
+  <style>
+    /* CSS styling for the thank you page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #333;
+    }
+
+    .message {
+      font-size: 18px;
+      margin-top: 20px;
+      color: #666;
+    }
+
+    .pop {
+      font-size: 72px;
+      font-weight: bold;
+      color: #FF4081;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .pop::before {
+      content: "Click to celebrate!";
+      display: block;
+      font-size: 14px;
+      color: #FF4081;
+      margin-top: 10px;
+    }
+
+    .pop.animate {
+      animation: colorAnimation 3s infinite;
+    }
+
+    .pop .popper {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      animation: popperAnimation 1.5s;
+    }
+
+    @keyframes colorAnimation {
+      0% {
+        color: #FF4081;
+      }
+      10% {
+        color: #F50057;
+      }
+      20% {
+        color: #9C27B0;
+      }
+      30% {
+        color: #3F51B5;
+      }
+      40% {
+        color: #00BCD4;
+      }
+      50% {
+        color: #4CAF50;
+      }
+      60% {
+        color: #CDDC39;
+      }
+      70% {
+        color: #FFEB3B;
+      }
+      80% {
+        color: #FF9800;
+      }
+      90% {
+        color: #795548;
+      }
+      100% {
+        color: #FF4081;
+      }
+    }
+
+    @keyframes popperAnimation {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      30% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+  </style>
+  <script>
+    // JavaScript to add interactivity
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var popElement = document.querySelector('.pop');
+      var containerElement = document.querySelector('.container');
+      var audioElement = document.getElementById('firecracker');
+
+      // Add event listener to the pop element
+      popElement.addEventListener('click', function(e) {
+        var x = e.clientX - containerElement.offsetLeft;
+        var y = e.clientY - containerElement.offsetTop;
+
+        // Play firecracker sound
+        audioElement.play();
+
+        var popper = document.createElement('div');
+        popper.classList.add('popper');
+        popper.style.left = x + 'px';
+        popper.style.top = y + 'px';
+        containerElement.appendChild(popper);
+
+        setTimeout(function() {
+          popper.remove();
+        }, 1500);
+      });
+
+      // Add class to animate the pop element
+      popElement.addEventListener('mouseover', function() {
+        this.classList.add('animate');
+      });
+
+      // Remove class to stop animating the pop element
+      popElement.addEventListener('mouseout', function() {
+        this.classList.remove('animate');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Thank You for Donating!</h1>
+    <div class="message">
+      <p>Your generosity makes a difference.</p>
+      <p class="pop">THANK YOU!</p>
+    </div>
+    <audio id="firecracker" src="assets/sounds/firecracker.mp3" preload="auto"></audio>
+  </div>
+</body>
+</html>

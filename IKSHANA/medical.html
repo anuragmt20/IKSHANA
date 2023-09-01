@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Disaster Response Chatbot</title>
+  <style>
+    /* CSS styles for the chatbot interface */
+    body {
+      font-family: Arial, sans-serif;
+	    font-size: 16px;
+	    line-height: 1.5;
+	    color: #333;
+      background-color: #8261ee;
+        }
+    .container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px;
+}
+header {
+	background-color: #8261ee;
+	color: #fff;
+	padding: 10px 0;
+}
+header h1 {
+		font-size: 36px;
+		font-weight: bold;
+		margin: 0;
+	}
+
+	header nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	header nav ul li {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	header nav ul li a {
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+	}
+    .chat-container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .chat-log {
+      height: 300px;
+      overflow-y: scroll;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .user-message {
+      color: #333;
+    }
+
+    .bot-message {
+      color: #666;
+    }
+
+    .input-container {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .user-input {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .user-input:focus {
+      outline: none;
+    }
+
+    .submit-button {
+      margin-top: 5px;
+      background-color: #8261ee;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .submit-button:hover {
+      background-color: #ff589e;
+    }
+
+    .response-buttons {
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .response-button {
+      margin-bottom: 5px;
+      display: block;
+      background-color: #8261ee;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .response-button:hover {
+      background-color: #ff589e;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+		<div class="container">
+			<h1>IKSHANA</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html #welcome">Home</a></li>
+					<li><a href="index.html #features">About Us</a></li>
+					<li><a href="index.html #contact-us">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+  <div class="chat-container">
+    <div class="header">
+      <h1>Quick  Assistance Bot</h1>
+    </div>
+    <div class="response-buttons">
+      <button class="response-button" onclick="selectResponse('1')">I need immediate medical assistance.</button>
+      <button class="response-button" onclick="selectResponse('2')">I need food and water.</button>
+      <button class="response-button" onclick="selectResponse('3')">I'm trapped and need rescue.</button>
+      <button class="response-button" onclick="selectResponse('4')">I'm looking for shelter.</button>
+      <button class="response-button" onclick="selectResponse('5')">I need information about evacuation routes.</button>
+      <button class="response-button" onclick="selectResponse('6')">I need to locate my family members.</button>
+      <button class="response-button" onclick="selectResponse('7')">I need assistance for my pets.</button>
+      <button class="response-button" onclick="selectResponse('8')">I suspect a gas leak.</button>
+      <button class="response-button" onclick="selectResponse('9')">I need to report a downed power line.</button>
+      <button class="response-button" onclick="selectResponse('10')">I need to report structural damage.</button>
+      <!-- Add more response buttons here -->
+    </div>
+    <div class="chat-log" id="chatLog"></div>
+    <div class="input-container">
+      <input type="text" class="user-input" id="userInput" placeholder="Type your message..." />
+      <button class="submit-button" onclick="sendMessage()">Send</button>
+    </div>
+    <div class="footer">
+      Powered by IKSHANA &copy; 2023
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code for the chatbot functionality
+    const chatLog = document.getElementById('chatLog');
+    const userInput = document.getElementById('userInput');
+
+    const responses = {
+      "1": "Please stay calm and try to contact us in this no 471-2730045. Medical help is on the way.",
+      "2": "You can use IKSHANA emergency needs service . They will provide food and water.",
+      "3": "If you're trapped, please call your local emergency number 112 immediately. Help is on the way.",
+      "4": "Evacuation shelters have being established try conatacting this No 0471 233 1345. They will provide temporary shelter and assistance.",
+      "5": "For evacuation routes and other emergency information, tune in to your local news or contact the emergency hotline at 0471 233 1345.",
+      "6": "Contact your local authorities or use online platforms like Safe & Well to locate and reunite with your family members.",
+      "7": "Local animal shelters and rescue organizations are providing assistance for pets. Contact them for help or contact in this no 080506 53543.",
+      "8": "If you suspect a gas leak, leave the area immediately and call the gas company's emergency hotline at 0471 233 1345.",
+      "9": "Keep a safe distance and report downed power lines. you can conatact KSEB in this no 0471-2555544.",
+      "10": "If you notice any structural damage to buildings, please report it to the loscal authorities or emergency hotline at 0471 233 1345.",
+      // Add more responses here
+      "100": "Thank you for using the disaster response chatbot. Stay safe!"
+    };
+
+    function sendMessage() {
+      const userMessage = userInput.value;
+      if (userMessage.trim() !== '') {
+        appendMessage(userMessage, 'user-message');
+
+        if (responses.hasOwnProperty(userMessage)) {
+          const botMessage = responses[userMessage];
+          appendMessage(botMessage, 'bot-message');
+        } else {
+          appendMessage("I'm sorry, I don't have a response for that request.", 'bot-message');
+        }
+
+        userInput.value = '';
+        userInput.focus();
+      }
+    }
+
+    function selectResponse(request) {
+      const botMessage = responses[request];
+      appendMessage(botMessage, 'bot-message');
+    }
+
+    function appendMessage(message, className) {
+      const messageContainer = document.createElement('div');
+      messageContainer.classList.add(className);
+      messageContainer.innerText = message;
+      chatLog.appendChild(messageContainer);
+      chatLog.scrollTop = chatLog.scrollHeight;
+    }
+  </script>
+</body>
+</html>
